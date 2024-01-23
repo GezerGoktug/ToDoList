@@ -4,6 +4,7 @@
 <li>adding, removing data to the list, </li>  
 <li>clearing the list</li>  
 <li>deleting the desired element</li>  
+<li>updating the desired element</li>  
 </ul>
 were added to the project with JavaScript. At the same time, the data is saved in localStorage and the data added to the list is pulled even if the page is refreshed. appears on the screen again.
 </p></strong>
@@ -18,7 +19,22 @@ were added to the project with JavaScript. At the same time, the data is saved i
 </ul></strong>
 
 
-https://github.com/GezerGoktug/ToDoList/assets/146975286/35a6d460-c12d-4a13-8bdc-b26337f1b192
+
+
+# Deploying
+
+**<p>You can access the project live below.</p>**
+
+<a href="https://todolists-web-site.netlify.app/">https://todolists-web-site.netlify.app/</a>
+<br>
+<br>
+<br>
+
+
+
+
+
+https://github.com/GezerGoktug/ToDoList/assets/146975286/a3e1a7cc-9355-42cf-a231-aad79654c1f1
 
 
 
