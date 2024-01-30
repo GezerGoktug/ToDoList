@@ -74,5 +74,5 @@ Go to `http://localhost:3000` in your browser.
 
 ## Contribute 🤝
 
-- You can use the [Issues](https://github.com/avcisalih/weatherProject) tab for bug reports and suggestions.
+- You can use the [Issues](https://github.com/GezerGoktug/ToDoList) tab for bug reports and suggestions.
 - If you want to contribute to the project, create a fork and submit a pull request.
