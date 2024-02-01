@@ -6,7 +6,7 @@ const btnClearDOM = document.querySelector("#clear");
 //! DOM ACCESS
 
 let todos = []; //! Todoları saklamak için dizi
-
+let indexCounter = 0;
 //! todo class:Todo nesnesi oluşturan class
 
 class todo {
@@ -48,6 +48,8 @@ class UI {
 
   static removeTodoArr(id) {
     todos = todos.filter((item) => item.todolistid != id);
+    if(todos.length === 0)
+    indexCounter = 0;
   }
   //! TODO LİSTESİNİ TEMİZLEME METODU: Tüm todo'ları temizler ve arayüzü günceller.
 
@@ -59,7 +61,7 @@ class UI {
    //! TODO LİSTESİNİ GÜNCELLEME METODU:  Seçilen todoyu inputtan aldığı value ya göre  günceller.
   static updateToDoObject(e){
   e.preventDefault();
-  if(todoinput.value==""){
+  if(todoinput.value.trim()==""){
   UI.alert("Please enter one todo ");
   return;
   }
@@ -96,14 +98,15 @@ btnClearDOM.addEventListener("click", (e) => {
   e.preventDefault();
   UI.alert("Liste temizlendi");
   UI.clearTodoList();
+  indexCounter=0;
 });
 //! TODO EKLEME BUTONUNA TIKLANDIĞINDA: Yeni todo ekleyerek arayüzü güncelle
 
 todobutton.addEventListener("click", (e) => {
   e.preventDefault();
-  let todoid = todos.length + 1;
+  let todoid = indexCounter++;
   let todovalue = todoinput.value;
-  if (todovalue==""){
+  if (todovalue.trim()==""){
   UI.alert("Please enter one todo.");
   return;
   }
