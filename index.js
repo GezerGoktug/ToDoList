@@ -84,11 +84,23 @@ class UI {
     window.alert(message);
   }
 }
+//! Sayfa yenilendikten sonra indexCounter değişkenini günceller.
+function findBiggestID(array) {
+  let ID = array[0].todolistid;
+  for (let i = 1; i < array.length; i++) {
+      if (array[i].todolistid > ID) {
+        ID = array[i].todolistid;
+      }
+  }
+  return ID;
+}
+
 //! SAYFA YÜKLENDİĞİNDE kaydedilmiş veriyi yükler.
 window.addEventListener("load", () => {
   const savedData = JSON.parse(localStorage.getItem("data"));
   if (savedData) {
     todos = savedData.todos;
+    indexCounter = todos.length === 0 ? 0 :findBiggestID(todos) + 1;
   }
   UI.display();
 });
